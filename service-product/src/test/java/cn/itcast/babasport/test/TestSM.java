@@ -1,6 +1,7 @@
 package cn.itcast.babasport.test;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -43,5 +44,11 @@ public class TestSM {
 		bbsTest.setName("nierdaye");
 		bbsTest.setBirthday(new Date());
 		bbsTestService.insertBbsTest(bbsTest);
+	}
+	
+	@Test
+	public void testService1() {
+		List<BbsTest> selectBbsTest = bbsTestService.selectBbsTest();
+		System.out.println(selectBbsTest.toString()+"999999999");
 	}
 }

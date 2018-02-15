@@ -8,4 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into bbs_test(name,birthday) values(#{name},#{birthday})
 	</insert>
 
+	<select id="selectBbsTest" resultType="cn.itcast.babasport.pojo.test.BbsTest">
+		select * from bbs_test
+	</select>
 </mapper>

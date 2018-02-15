@@ -2,6 +2,8 @@ package cn.itcast.babasport.service.test;
 
 
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -9,9 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import cn.itcast.babasport.mapper.test.BbsTestMapper;
 import cn.itcast.babasport.pojo.test.BbsTest;
-import cn.itcast.babasport.service.test.BbsTestService;
 
-@Service
+@Service("bbsTestService")
 public class BbsTestServiceImpl implements BbsTestService {
 	
 	@Resource
@@ -23,4 +24,10 @@ public class BbsTestServiceImpl implements BbsTestService {
 		bbsTestMapper.insertBbsTest(bbsTest);
 	}
 
+	@Override
+	public List<BbsTest> selectBbsTest() {
+			return bbsTestMapper.selectBbsTest();
+	}
+
+	
 }
