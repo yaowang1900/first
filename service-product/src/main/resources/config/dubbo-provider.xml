@@ -26,13 +26,14 @@
 		<!-- 配置应用的名称 用于监控 -->
 		<dubbo:application name="service-product"/>
 		
-		<dubbo:registry protocol="zookeeper" address="192.168.1.8:2181"/>
+		<!-- <dubbo:registry protocol="zookeeper" address="192.168.1.8:2181"/> -->
 		<!-- 配置dubbo直连 -->
-		<!-- <dubbo:registry address="N/A"/> -->
+		<dubbo:registry address="N/A"/>
 		<!-- 用dubbo协议在指定端口暴露服务 -->  
     	<dubbo:protocol name="dubbo" port="20880" />		
 		
 		<!-- 暴露服务到注册中心上 -->
 		<dubbo:service ref="bbsTestService" interface="cn.itcast.babasport.service.test.BbsTestService" />
+		<dubbo:service ref="brandService" interface="cn.itcast.babasport.service.product.BrandService" />
 		
 </beans>

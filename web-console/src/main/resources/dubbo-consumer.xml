@@ -25,10 +25,12 @@
 		<!-- 配置应用的名称 用于监控 -->
 		<dubbo:application name="console"/>
 		
-		<dubbo:registry protocol="zookeeper" address="192.168.1.8:2181"/>
+		<!-- <dubbo:registry protocol="zookeeper" address="192.168.1.8:2181"/> -->
+		<dubbo:registry address="N/A"/>
 		
 		<!-- 暴露服务到注册中心上 -->
-		<dubbo:reference id="bbsTestService" interface="cn.itcast.babasport.service.test.BbsTestService" ></dubbo:reference>
+		<dubbo:reference id="bbsTestService" interface="cn.itcast.babasport.service.test.BbsTestService" url="dubbo://127.0.0.1:20880"></dubbo:reference>
+		<dubbo:reference id="brandService" interface="cn.itcast.babasport.service.product.BrandService" url="dubbo://127.0.0.1:20880"></dubbo:reference>
 		<!-- 配置全局的连接超时时间 -->
 		<dubbo:consumer timeout="600000000"/>		
 </beans>

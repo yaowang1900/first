@@ -18,7 +18,7 @@
 		<table cellspacing="1" cellpadding="2" width="100%" border="0" class="pn-ftable">
 			<tbody>
 				<tr>
-					<td width="20%" class="pn-flabel pn-flabel-h">
+					<td width="20%" class="pn-flabel pn-flabel-	h">
 						<span class="pn-frequired">*</span>
 						品牌名称:</td><td width="80%" class="pn-fcontent">
 						<input type="text" class="required" name="name" maxlength="100"/>

@@ -26,6 +26,13 @@
 		
 		<!-- 配置三大组件：处理器映射器，处理器是配置，视图解析器 -->
 		<!-- 好处：1.匹配最新的 2.加载类型转换器、校验器hibernate-valication/json解析器 -->
+		<bean id="converterService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+			<property name="converters">
+				<set>
+					<bean class="cn.itcast.babasport.utils.converter.CustomParamsConverter"/>
+				</set>
+			</property>
+		</bean>
 		<mvc:annotation-driven/>
 		
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

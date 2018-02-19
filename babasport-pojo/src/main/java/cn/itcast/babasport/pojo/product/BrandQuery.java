@@ -42,12 +42,14 @@ public class BrandQuery implements Serializable{
 		return pageSize;
 	}
 	public void setPageSize(Integer pageSize) {
+		this.startRow = (pageNo - 1) * pageSize;
 		this.pageSize = pageSize;
 	}
 	public Integer getPageNo() {
 		return pageNo;
 	}
 	public void setPageNo(Integer pageNo) {
+		this.startRow = (pageNo - 1) * pageSize;
 		this.pageNo = pageNo;
 	}
 	
