@@ -4,6 +4,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>babasport-edit</title>
+<script type="text/javascript">
+	
+	function uploadPic(){
+		var opts = {
+				url:'/upload/uploadPic.do',
+				type:'post',
+				dataType:'json',
+				success:function(data){
+					//图片回显
+					$("#allUrl").attr("src",data.allUrl);
+				}
+		}
+		$("#jvForm").ajaxSubmit(opts);
+	}
+</script>
+
 </head>
 <body>
 <div class="box-positon">
